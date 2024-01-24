@@ -1,0 +1,2 @@
+name: "mobilevitv2"
+pretrained_model: "apple/mobilevitv2-1.0-imagenet1k-256"

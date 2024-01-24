@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "fraszczak_devcontainer",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "fraszczak/segmentation:latest",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/workspace",
+	"runArgs": ["--name", "${localEnv:USER}_devcontainer",
+		"-it",
+		"--rm",
+		"--gpus", "device=2",
+		"--cpuset-cpus", "8-15",
+		"--runtime=nvidia",
+		"--shm-size=8G",
+		"--memory=28G",
+ 		"--memory-swap=32G",
+		"--volume" , "/multiverse/storage/fraszczak/canopy-volume-estimation:/workspace/fraszczak/canopy-volume-estimation"
+		// "--network", "host",
+		// "-e", "DISPLAY=${localEnv:DISPLAY}",
+		// "-v",  "/../../tmp/.X11-unix/:/tmp/.X11-unix/",
+		// "-v", "/../../tmp/.docker.xauth:/tmp/.docker.xauth",
+		// "-e", "XAUTHORITY=/tmp/.docker.xauth"
+	],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.isort",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"github.codespaces",
+				"github.copilot"
+			]
+		}
+ 	}
+}

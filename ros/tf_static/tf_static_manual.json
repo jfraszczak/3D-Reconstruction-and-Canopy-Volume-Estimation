@@ -1,0 +1,154 @@
+[
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "os_sensor",
+        "transform": {
+            "translation":{
+                "x": -0.05,
+                "y": 0,
+                "z": 0.721
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 0,
+                "roll": 0
+            }
+        }
+    },
+
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "laser",
+        "transform": {
+            "translation":{
+                "x": 0.07,
+                "y": 0,
+                "z": 0.615
+            },
+            "rotation": {
+                "yaw": 3.1416,
+                "pitch": -1.5708,
+                "roll": 0
+            }
+        }
+    },
+
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "d435i_link",
+        "transform": {
+            "translation":{
+                "x": 0.026,
+                "y": 0.092,
+                "z": 0.578
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 1.5708,
+                "roll": -0.7854
+            }
+        }
+    },
+
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "reach_rs",
+        "transform": {
+            "translation":{
+                "x": -0.523,
+                "y": 0.097,
+                "z": 0.555
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 0,
+                "roll": 0
+            }
+        }
+    },
+
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "t265_pose_frame",
+        "transform": {
+            "translation":{
+                "x": 0.028,
+                "y": 0.02,
+                "z": 0.496
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 0,
+                "roll": 0
+            }
+        }
+    },
+
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "senop",
+        "transform": {
+            "translation":{
+                "x": -0.37,
+                "y": 0.5,
+                "z": 0.345
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 0,
+                "roll": 0
+            }
+        }
+    },
+    
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "pixhawk_imu",
+        "transform": {
+            "translation":{
+                "x": -0.1725,
+                "y": 0,
+                "z": -0.03
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 0,
+                "roll": 0
+            }
+        }
+    },
+
+    {
+        "frame_id": "odom",
+        "child_frame_id": "t265_odom_frame",
+        "transform": {
+            "translation":{
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 0,
+                "roll": 0
+            }
+        }
+    },
+
+    {
+        "frame_id": "base_link",
+        "child_frame_id": "scout_link",
+        "transform": {
+            "translation":{
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "yaw": 0,
+                "pitch": 0,
+                "roll": 0
+            }
+        }
+    }
+]

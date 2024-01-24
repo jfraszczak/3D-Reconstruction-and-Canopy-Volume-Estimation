@@ -1,0 +1,3 @@
+path: 'data/3d_reconstruction/reconstructions/2021/row_1'
+segmentation_model_checkpoint: 'outputs/2023-11-23/09-22-02/finetuned_model/checkpoint-770'
+segmentation_pretrained_model: 'openmmlab/upernet-convnext-small'

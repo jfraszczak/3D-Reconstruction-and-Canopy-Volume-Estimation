@@ -1,0 +1,15 @@
+bag:
+  path: '/media/jakub/Extreme SSD/2022-07-28-13-05-05_filare_4'
+  topics:
+    gps: '/fix'
+    depth_img: '/d435i/aligned_depth_to_color/image_raw'
+    color_img: '/d435i/color/image_raw'
+    camera_info:  '/d435i/aligned_depth_to_color/camera_info'
+    lidar_points: '/os_cloud_node/points'
+    laser_scan: '/scan'
+
+tf_static:
+  path: 'ros/tf_static/tf_static_manual.json'
+  lidar_link: 'os_sensor'
+  camera_link: 'd435i_link'
+  scan_link: 'laser'

@@ -1,0 +1,3 @@
+name: "beit"
+pretrained_model: "microsoft/beit-base-patch16-384"
+best_checkpoint: ${hydra:runtime.cwd}/outputs/2023-11-12/17-51-50/beit_finetuned/checkpoint-1452

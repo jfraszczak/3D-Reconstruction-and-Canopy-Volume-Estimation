@@ -1,0 +1,2 @@
+name: "segformer_weighted_loss"
+pretrained_model: "nvidia/mit-b0"

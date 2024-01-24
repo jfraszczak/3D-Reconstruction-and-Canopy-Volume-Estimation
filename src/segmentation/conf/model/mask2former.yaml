@@ -1,0 +1,3 @@
+name: "mask2former"
+pretrained_model: "facebook/mask2former-swin-tiny-ade-semantic"
+best_checkpoint: ${hydra:runtime.cwd}/outputs/2023-11-13/00-29-05/mask2former_finetuned/checkpoint-3168

@@ -1,0 +1,1 @@
+from .upernet_modified_loss import UperNetForSemanticSegmentationWeightedCrossEntropy

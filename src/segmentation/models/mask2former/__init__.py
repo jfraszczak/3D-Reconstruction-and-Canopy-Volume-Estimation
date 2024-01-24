@@ -1,0 +1,1 @@
+from .mask2former_trainer import Mask2FormerTrainer

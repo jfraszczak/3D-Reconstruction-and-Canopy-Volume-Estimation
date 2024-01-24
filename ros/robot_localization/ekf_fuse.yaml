@@ -1,0 +1,145 @@
+# For parameter descriptions, please refer to the template parameter files for each node.
+
+ekf_filter_node_odom:
+  ros__parameters:
+    frequency: 5.0
+    sensor_timeout: 0.3
+    two_d_mode: false
+    transform_time_offset: 0.0
+    transform_timeout: 0.0
+    print_diagnostics: true
+    debug: true 
+    #debug_out_file: /home/jakub/Documents/RTAB-Map/src/my_rtabmap/launch/debug.txt
+    publish_tf: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+
+    odom0: /t265/odom/sample
+    odom0_config: [true, true, true,
+                  true, true, true,
+                  false,  false,  false,
+                  false,  false,  false,
+                  false, false, false]
+    odom0_queue_size: 10
+    odom0_differential: true
+    odom0_relative: false
+
+    odom1: /odom
+    odom1_config: [true, true, true,
+                  true, true, true,
+                  false,  false,  false,
+                  false,  false,  false,
+                  false, false, false]
+    odom1_queue_size: 10
+    odom1_differential: true
+    odom1_relative: false
+
+    imu0: /mavros/imu/data_raw
+    imu0_config: [false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  true,  true,  true,
+                  true,  true,  true]
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 10
+    imu0_remove_gravitational_acceleration: true
+
+    use_control: false
+
+ekf_filter_node_map:
+  ros__parameters:
+    frequency: 5.0
+    sensor_timeout: 0.3
+    two_d_mode: false
+    transform_time_offset: 0.0
+    transform_timeout: 0.0
+    print_diagnostics: true
+    debug: false
+    publish_tf: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: map
+
+    odom0: /t265/odom/sample
+    odom0_config: [true, true, true,
+                  true, true, true,
+                  false,  false,  false,
+                  false,  false,  false,
+                  false, false, false]
+    odom0_queue_size: 10
+    odom0_differential: true
+    odom0_relative: false
+
+    odom1: /odom
+    odom1_config: [true, true, true,
+                  true, true, true,
+                  false,  false,  false,
+                  false,  false,  false,
+                  false, false, false]
+    odom1_queue_size: 10
+    odom1_differential: true
+    odom1_relative: false
+
+    odom2: odometry/gps
+    odom2_config: [true,  true,  true,
+                  false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  false, false, false]
+    odom2_queue_size: 10
+    odom2_differential: false
+    odom2_relative: false
+
+    imu0: /mavros/imu/data_raw
+    imu0_config: [false, false, false,
+                  false, false, false,
+                  false, false, false,
+                  true,  true,  true,
+                  true,  true,  true]
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 10
+    imu0_remove_gravitational_acceleration: true
+
+    # imu1: /d435i/imu
+    # imu1_config: [false, false, false,
+    #               false, false, false,
+    #               false, false, false,
+    #               true,  true,  true,
+    #               true,  true,  true]
+    # imu1_differential: false
+    # imu1_relative: false
+    # imu1_queue_size: 10
+    # imu1_remove_gravitational_acceleration: true
+    
+    use_control: false
+
+    # process_noise_covariance: [1.0, 1.0, 1e-3, 0.3, 0.3, 0.01, 0.5, 0.5, 0.1, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3]
+
+    # initial_estimate_covariance: [1.0, 1.0, 1e-9, 1.0, 1.0, 1e-9, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+    initial_state: [0.0,  0.0,  312.0,
+                    0.0,  0.0,  5.6,
+                    0.0,  0.0,  0.0,
+                    0.0,  0.0,  0.0,
+                    0.0,  0.0,  0.0]
+
+
+navsat_transform:
+  ros__parameters:
+    frequency: 5.0
+    #magnetic_declination_radians: 0.04828744
+    yaw_offset: 0.0
+    zero_altitude: false
+    broadcast_cartesian_transform: true
+    wait_for_datum: true
+    #datum: [44.937015388333336, 9.450198341666667, 4.855679579752934] # row 4
+    #datum: [44.936939196666664, 9.449845515, 5.564122960079115] # row 3
+    #datum: [44.93681629, 9.449609768333334, 5.515345991199249] # row 2
+    datum: [44.936692725, 9.449383648333333, 5.597076963068292] # row 1

@@ -1,0 +1,27 @@
+defaults:
+  - _self_
+  - model: upernet
+params:
+  lr: 0.00006
+  epochs: 50
+  batch_size: 4
+paths:
+  dataset:
+    dataset_path: ${hydra:runtime.cwd}/data/segmentation/dataset
+    train_data: "train"
+    train_annotations: "annotations_train.json"
+    val_data: "val"
+    val_annotations: "annotations_val.json"
+    test_data: "test"
+    test_annotations: "annotations_test.json"
+  raw_data:
+    dataset_path: ${hydra:runtime.cwd}/data/segmentation/raw
+    images_dir: "images"
+    annotations_file: "annotations/instances_default.json"
+dataset_split:
+  train_size: 0.8
+  val_size: 0.2
+
+hydra:
+  job:
+    chdir: True
