@@ -1,3 +1,7 @@
 # 3D-Reconstruction-and-Canopy-Volume-Estimation
 
-![alt text]([http://url/to/img.png](https://github.com/jfraszczak/3D-Reconstruction-and-Canopy-Volume-Estimation/blob/main/Methodology%20(1).png)https://github.com/jfraszczak/3D-Reconstruction-and-Canopy-Volume-Estimation/blob/main/Methodology%20(1).png)
+
+<p align="center">
+  <img width="800" src="https://github.com/jfraszczak/3D-Reconstruction-and-Canopy-Volume-Estimation/blob/main/Methodology%20(1).png">
+</p>
+
